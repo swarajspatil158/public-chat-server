@@ -8,6 +8,12 @@ app.get('/home', (req, res) => {
   res.status(200).json('Welcome, your app is working well');
 })
 
+app.post('/postData', (req, res) => {
+    res.status(200).json({
+      message: "Data received successfully",
+      data: req.body
+    });
+  })
 
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
